@@ -13,7 +13,10 @@ The python scripts `Move_Turtle.py` and `List_Turtle.py` are located in the `my_
 ## ROS Version and Setup on MacOS
 Parallels Desktop was used to run the VM and runs Ubuntu 16.04 with ROS Kinetic. This means that the `cmd_vel` (used in indigo for the turtlebot) topic does not exist; it is replaced with the `cmd_vel_mux/input/navi` topic. These have the same functionality.
 
-## Running
+## Compilation & Running
+
+Setting up this package has no special compilation steps, simply follow the standard ROS package steps.
+
 For my own convince I used a one line script `runme` in the root of the package directory. The contents of this script are:
 
 ```bash
@@ -25,6 +28,22 @@ To run this on another system, the paths to the `tutorial.yaml` and `tutorial.wo
 Additionally, the `turtlebot_stage` system must be installed.
 
 The `Listen_Turtle.py` file also logs the inverse kinematics (it outputs the wheel rotations), this was for debugging purposes.
+
+### Running Move_Turtle
+
+To run this:
+
+```bash
+rosrun my_turtle_adams Move_Turtle.py
+```
+
+### Running Listen_Turtle
+
+To run this:
+
+```bash
+rosrun my_turtle_adams Listen_Turtle.py
+```
 
 ## Observations
 
